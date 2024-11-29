@@ -67,9 +67,6 @@ export const RootNavigator: React.FC = () => {
             <RootStack.Screen
                 name="ModalScreen"
                 component={ModalScreen}
-                options={{
-                    presentation: "modal",
-                }}
             />
         </RootStack.Navigator>
     )

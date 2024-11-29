@@ -38,6 +38,48 @@ export const Home: React.FC<HomeProps> = ({ navigation }) => {
             >
                 <Text>{"Safe Area"}</Text>
             </Pressable>
+            <Pressable
+                style={styles.itemContainer}
+                onPress={() => navigation.navigate("KeyboardScreen")}
+            >
+                <Text>{"Keyboard"}</Text>
+            </Pressable>
+            <Pressable
+                style={styles.itemContainer}
+                onPress={() => navigation.navigate("TextScreen")}
+            >
+                <Text>{"Text"}</Text>
+            </Pressable>
+            <Pressable
+                style={styles.itemContainer}
+                onPress={() => navigation.navigate("ImageScreen")}
+            >
+                <Text>{"Image"}</Text>
+            </Pressable>
+            <Pressable
+                style={styles.itemContainer}
+                onPress={() => navigation.navigate("PressableScreen")}
+            >
+                <Text>{"Pressable"}</Text>
+            </Pressable>
+            <Pressable
+                style={styles.itemContainer}
+                onPress={() => navigation.navigate("FlatListScreen")}
+            >
+                <Text>{"Flat list"}</Text>
+            </Pressable>
+            <Pressable
+                style={styles.itemContainer}
+                onPress={() => navigation.navigate("SectionListScreen")}
+            >
+                <Text>{"Section list"}</Text>
+            </Pressable>
+            <Pressable
+                style={styles.itemContainer}
+                onPress={() => navigation.navigate("ModalScreen")}
+            >
+                <Text>{"Modal"}</Text>
+            </Pressable>
         </ScrollView>
     )
 }

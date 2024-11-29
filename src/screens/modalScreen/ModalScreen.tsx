@@ -1,36 +1,54 @@
 import * as React from "react"
-import { StyleSheet, View, Pressable, Modal, Text, ActivityIndicator } from "react-native"
-import FontAwesome from "@expo/vector-icons/FontAwesome"
+import { StyleSheet, View, Pressable, Modal, Text, Button } from "react-native"
 
 export const ModalScreen: React.FC = () => {
-    const [isOpen, setIsOpen] = React.useState(false)
+    const [isFullScreenOpen, setIsFullScreenOpen] = React.useState(false)
+    const [isFormSheetOpen, setIsFormSheetOpen] = React.useState(false)
 
     return (
         <React.Fragment>
             <View style={styles.container}>
                 <Pressable
                     style={styles.pressable}
-                    onPress={() => setIsOpen(true)}
+                    onPress={() => setIsFullScreenOpen(true)}
                 >
-                    <Text style={styles.text}>{"Open modal"}</Text>
+                    <Text style={styles.text}>{"Open fullscreen modal"}</Text>
+                </Pressable>
+                <Pressable
+                    style={styles.pressable}
+                    onPress={() => setIsFormSheetOpen(true)}
+                >
+                    <Text style={styles.text}>{"Open form sheet modal"}</Text>
                 </Pressable>
             </View>
             <Modal
-                visible={isOpen}
+                visible={isFullScreenOpen}
                 animationType="slide"
-                onRequestClose={() => setIsOpen(false)}
+                presentationStyle="fullScreen"
+                transparent={false}
+                statusBarTranslucent={false}
+                onRequestClose={() => setIsFullScreenOpen(false)}
             >
                 <View style={styles.modalContainer}>
-                    <Pressable onPress={() => setIsOpen(false)}>
-                        <FontAwesome
-                            name="close"
-                            size={24}
-                            color="black"
-                        />
-                    </Pressable>
-                    <View style={styles.loaderContainer}>
-                        <ActivityIndicator size={120} />
-                    </View>
+                    <Button
+                        title="Close modal"
+                        onPress={() => setIsFullScreenOpen(false)}
+                    />
+                </View>
+            </Modal>
+            <Modal
+                visible={isFormSheetOpen}
+                animationType="slide"
+                presentationStyle="formSheet"
+                transparent={false}
+                statusBarTranslucent={false}
+                onRequestClose={() => setIsFormSheetOpen(false)}
+            >
+                <View style={styles.modalContainer}>
+                    <Button
+                        title="Close modal"
+                        onPress={() => setIsFormSheetOpen(false)}
+                    />
                 </View>
             </Modal>
         </React.Fragment>
@@ -44,6 +62,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     pressable: {
+        marginVertical: 12,
         padding: 12,
         borderWidth: 1,
         borderRadius: 4,
@@ -54,10 +73,6 @@ const styles = StyleSheet.create({
     modalContainer: {
         flexGrow: 1,
         padding: 20,
-    },
-    loaderContainer: {
-        flexGrow: 1,
         justifyContent: "center",
-        alignItems: "center",
     },
 })

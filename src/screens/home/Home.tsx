@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack"
 import * as React from "react"
-import { StyleSheet, Pressable, ScrollView, Text } from "react-native"
+import { StyleSheet, Pressable, ScrollView, Text, Platform } from "react-native"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { RootScreens } from "../../navigation/RootScreens"
 
@@ -20,6 +20,7 @@ export const Home: React.FC<HomeProps> = ({ navigation }) => {
             ]}
         >
             <Text style={styles.title}>{"React native"}</Text>
+            <Text style={styles.subtitle}>{`Running on ${Platform.OS}`}</Text>
             <Pressable
                 style={styles.itemContainer}
                 onPress={() => navigation.navigate("ViewScreen")}
@@ -94,7 +95,11 @@ const styles = StyleSheet.create({
         fontSize: 42,
         fontWeight: "bold",
         textAlign: "center",
-        marginVertical: 32,
+        marginTop: 32,
+    },
+    subtitle: {
+        textAlign: "center",
+        marginBottom: 32,
     },
     itemContainer: {
         marginVertical: 8,

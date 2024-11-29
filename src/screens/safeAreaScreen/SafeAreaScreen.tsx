@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     container: {
         flexGrow: 1,
         justifyContent: "center", // DEMO
-        backgroundColor: "blue",
+        backgroundColor: "green",
         paddingHorizontal: 20,
     },
     itemContainer: {

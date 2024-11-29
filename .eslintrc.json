@@ -1,0 +1,31 @@
+{
+  "extends": "universe/native",
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@src/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"]
+      }
+    ],
+    "semi": "off",
+    "quotes": ["error", "double", { "allowTemplateLiterals": true }],
+    "prettier/prettier": ["error", { "singleQuote": false, "semi": false }]
+  }
+}

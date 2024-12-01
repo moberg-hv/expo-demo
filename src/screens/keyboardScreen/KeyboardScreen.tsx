@@ -29,12 +29,6 @@ export const KeyboardScreen: React.FC = () => {
                 <ScrollView contentContainerStyle={styles.scrollContainer}>
                     <View>
                         <Text>{"Keyboard handled: true"}</Text>
-                        <View style={styles.buttonContainer}>
-                            <Button
-                                title="Dismiss keyboard"
-                                onPress={Keyboard.dismiss}
-                            />
-                        </View>
                         <TextInput
                             style={styles.input}
                             placeholder="default"
@@ -74,12 +68,6 @@ export const KeyboardScreen: React.FC = () => {
                 <ScrollView contentContainerStyle={styles.scrollContainer}>
                     <View>
                         <Text>{"Keyboard handled: false"}</Text>
-                        <View style={styles.buttonContainer}>
-                            <Button
-                                title="Dismiss keyboard"
-                                onPress={Keyboard.dismiss}
-                            />
-                        </View>
                         <TextInput
                             style={styles.input}
                             placeholder="default"
@@ -125,9 +113,6 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         padding: 20,
         justifyContent: "space-between",
-    },
-    buttonContainer: {
-        marginVertical: 12,
     },
     input: {
         marginVertical: 4,

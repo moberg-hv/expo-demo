@@ -23,18 +23,22 @@ export const SafeAreaScreen: React.FC<SafeAreaScreen> = ({ navigation }) => {
                 },
             ]}
         >
-            <Pressable
-                style={styles.itemContainer}
-                onPress={() => setIsSafe(!isSafe)}
-            >
-                <Text style={styles.itemText}>{"Toggle safe area"}</Text>
-            </Pressable>
-            <Pressable
-                style={styles.itemContainer}
-                onPress={navigation.goBack}
-            >
-                <Text style={styles.itemText}>{"Go back"}</Text>
-            </Pressable>
+            <Text style={styles.text}>{"TOP"}</Text>
+            <View>
+                <Pressable
+                    style={styles.itemContainer}
+                    onPress={() => setIsSafe(!isSafe)}
+                >
+                    <Text style={styles.text}>{"Toggle safe area"}</Text>
+                </Pressable>
+                <Pressable
+                    style={styles.itemContainer}
+                    onPress={navigation.goBack}
+                >
+                    <Text style={styles.text}>{"Go back"}</Text>
+                </Pressable>
+            </View>
+            <Text style={styles.text}>{"BOTTOM"}</Text>
         </View>
     )
 }
@@ -42,7 +46,7 @@ export const SafeAreaScreen: React.FC<SafeAreaScreen> = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flexGrow: 1,
-        justifyContent: "center", // DEMO
+        justifyContent: "space-between",
         backgroundColor: "green",
         paddingHorizontal: 20,
     },
@@ -53,7 +57,7 @@ const styles = StyleSheet.create({
         borderColor: "white",
         borderRadius: 4,
     },
-    itemText: {
+    text: {
         textAlign: "center",
         color: "white",
     },

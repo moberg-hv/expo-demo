@@ -19,7 +19,7 @@ export const Home: React.FC<HomeProps> = ({ navigation }) => {
                 },
             ]}
         >
-            <Text style={styles.title}>{"React native"}</Text>
+            <Text style={styles.title}>{"React Native"}</Text>
             <Text style={styles.subtitle}>{`Running on ${Platform.OS}`}</Text>
             <Pressable
                 style={styles.itemContainer}

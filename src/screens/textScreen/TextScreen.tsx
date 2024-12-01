@@ -10,7 +10,6 @@ export const TextScreen: React.FC = () => {
                 <Text style={styles.textBold}>{"bold text"}</Text>
                 <Text>{" more regular text"}</Text>
             </View>
-            {/* DEMO: Text is block scoped */}
             <View style={styles.section}>
                 <Text>
                     {"Regular text "}

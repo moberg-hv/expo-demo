@@ -21,11 +21,11 @@ Velit scelerisque netus felis libero, semper lobortis nulla. Urna amet eget nost
 
 Aegestas tristique aliquet lectus ullamcorper arcu volutpat amet. Suscipit curabitur vel cras iaculis nullam eget molestie volutpat habitasse. Pharetra himenaeos arcu maecenas nam ridiculus mattis. Nunc vivamus curabitur mauris orci aliquet. Nisi himenaeos sodales placerat iaculis lorem convallis. Vestibulum convallis nascetur nec eros cursus consectetur. Integer faucibus bibendum hendrerit, malesuada urna lobortis.`
 
-// contentContainerStyle vs style
 export const ScrollViewScreen: React.FC = () => {
     const [isScrollable, setIsScrollable] = React.useState(false)
 
     if (isScrollable) {
+        // DEMO: contentContainerStyle vs style
         return (
             <React.Fragment>
                 <Pressable

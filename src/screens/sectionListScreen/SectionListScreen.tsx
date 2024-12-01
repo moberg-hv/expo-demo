@@ -38,7 +38,7 @@ export const SectionListScreen: React.FC = () => {
             keyExtractor={sectionListKeyExtractor}
             renderItem={renderSectionListItem}
             ItemSeparatorComponent={() => <View style={styles.itemSeparator} />}
-            // stickySectionHeadersEnabled
+            // stickySectionHeadersEnabled  // DEMO
         />
     )
 }

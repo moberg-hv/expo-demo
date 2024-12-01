@@ -1,20 +1,8 @@
 import * as React from "react"
-import {
-    Button,
-    KeyboardAvoidingView,
-    Platform,
-    StyleSheet,
-    TextInput,
-    View,
-    Text,
-    Keyboard,
-    ScrollView,
-} from "react-native"
-import { useSafeAreaInsets } from "react-native-safe-area-context"
+import { Button, KeyboardAvoidingView, Platform, StyleSheet, TextInput, View, Text, ScrollView } from "react-native"
 import { useHeaderHeight } from "@react-navigation/elements"
 
 export const KeyboardScreen: React.FC = () => {
-    const { top } = useSafeAreaInsets()
     const headerHeight = useHeaderHeight()
 
     const [isAvoidingKeyboard, setIsAvoidingKeyboard] = React.useState(false)

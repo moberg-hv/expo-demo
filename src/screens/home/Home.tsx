@@ -1,6 +1,6 @@
-import { NativeStackScreenProps } from "@react-navigation/native-stack"
 import * as React from "react"
 import { StyleSheet, Pressable, ScrollView, Text, Platform } from "react-native"
+import { NativeStackScreenProps } from "@react-navigation/native-stack"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { RootScreens } from "../../navigation/RootScreens"
 

@@ -1,6 +1,6 @@
-import { NativeStackScreenProps } from "@react-navigation/native-stack"
 import * as React from "react"
 import { StyleSheet, View, Pressable, Text, Alert, ScrollView } from "react-native"
+import { NativeStackScreenProps } from "@react-navigation/native-stack"
 import { RootScreens } from "../../navigation/RootScreens"
 
 type PressableScreenProps = NativeStackScreenProps<RootScreens, "PressableScreen">

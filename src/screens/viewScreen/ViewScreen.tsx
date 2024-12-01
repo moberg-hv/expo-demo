@@ -1,10 +1,6 @@
 import * as React from "react"
 import { StyleSheet, View, Text, ScrollView } from "react-native"
 
-// pixels (dpi) and percentages
-// flex, flex-direction
-// border, margin, padding
-// shadows
 export const ViewScreen: React.FC = () => {
     return (
         <ScrollView contentContainerStyle={styles.scrollContainer}>
@@ -13,7 +9,7 @@ export const ViewScreen: React.FC = () => {
                     style={[
                         styles.view,
                         {
-                            width: 200,
+                            width: 200, // px
                         },
                     ]}
                 >

@@ -14,7 +14,7 @@ export const ImageScreen: React.FC = () => {
             <View style={styles.itemContainer}>
                 <Image
                     source={{
-                        uri: "https://s3.eu-central-1.amazonaws.com/eu.peopleforce.io/ozr80wb5ixd1i1p7c3migl0z5m06?response-content-disposition=inline%3B%20filename%3D%22Moberg_logo_brand%20color.png%22%3B%20filename%2A%3DUTF-8%27%27Moberg_logo_brand%2520color.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4L5NWT3XV5H4MYNH%2F20241201%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20241201T124201Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5623f3dd4fba3b8cc91553cdf78807f68b4e17d980db1f34e554500eafb90d5c",
+                        uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/2560px-Flag_of_Iceland.svg.png",
                     }}
                     style={styles.image}
                 />
@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     },
     itemContainer: {
         flexDirection: "row",
+        alignItems: "center",
     },
     image: {
         marginVertical: 10,
@@ -51,6 +52,5 @@ const styles = StyleSheet.create({
     text: {
         flexGrow: 1,
         textAlign: "center",
-        verticalAlign: "middle",
     },
 })

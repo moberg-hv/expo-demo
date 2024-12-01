@@ -73,6 +73,7 @@ export const ViewScreen: React.FC = () => {
                     <View style={[styles.horizontalViewChild, { backgroundColor: "red" }]} />
                     <View style={styles.horizontalViewChild} />
                 </View>
+                <View style={styles.shadow} />
             </View>
         </ScrollView>
     )
@@ -110,5 +111,20 @@ const styles = StyleSheet.create({
         height: 100,
         width: 100,
         backgroundColor: "blue",
+    },
+    shadow: {
+        margin: 20,
+        height: 100,
+        width: 100,
+        backgroundColor: "grey",
+        shadowColor: "blue",
+        elevation: 20, // android
+        // ios
+        shadowOffset: {
+            width: 15,
+            height: 15,
+        },
+        shadowOpacity: 0.7,
+        shadowRadius: 10,
     },
 })

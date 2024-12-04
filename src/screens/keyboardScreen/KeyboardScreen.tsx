@@ -1,10 +1,12 @@
 import * as React from "react"
 import { Button, KeyboardAvoidingView, Platform, StyleSheet, TextInput, View, Text, ScrollView } from "react-native"
 import { useHeaderHeight } from "@react-navigation/elements"
+import { loremIpsum } from "../../common/loremIpsum"
 
 export const KeyboardScreen: React.FC = () => {
     const headerHeight = useHeaderHeight()
 
+    const [showLargeContent, setShowLargeContent] = React.useState(false)
     const [isAvoidingKeyboard, setIsAvoidingKeyboard] = React.useState(false)
 
     if (isAvoidingKeyboard) {
@@ -16,7 +18,12 @@ export const KeyboardScreen: React.FC = () => {
             >
                 <ScrollView contentContainerStyle={styles.scrollContainer}>
                     <View>
-                        <Text>{"Keyboard handled: true"}</Text>
+                        {showLargeContent && <Text>{loremIpsum}</Text>}
+                        <Button
+                            title="Toggle content"
+                            onPress={() => setShowLargeContent(!showLargeContent)}
+                        />
+                        <Text style={styles.keyboardStatus}>{"Keyboard handled: true"}</Text>
                         <TextInput
                             style={styles.input}
                             placeholder="default"
@@ -55,7 +62,12 @@ export const KeyboardScreen: React.FC = () => {
             <View style={styles.container}>
                 <ScrollView contentContainerStyle={styles.scrollContainer}>
                     <View>
-                        <Text>{"Keyboard handled: false"}</Text>
+                        {showLargeContent && <Text>{loremIpsum}</Text>}
+                        <Button
+                            title="Toggle content"
+                            onPress={() => setShowLargeContent(!showLargeContent)}
+                        />
+                        <Text style={styles.keyboardStatus}>{"Keyboard handled: false"}</Text>
                         <TextInput
                             style={styles.input}
                             placeholder="default"
@@ -101,6 +113,10 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         padding: 20,
         justifyContent: "space-between",
+    },
+    keyboardStatus: {
+        fontSize: 24,
+        marginVertical: 20,
     },
     input: {
         marginVertical: 4,
